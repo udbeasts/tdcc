@@ -28,6 +28,9 @@ if(isset($_POST['submit']))
           $sql = "INSERT INTO details (username,title,course_code, faculty, school)
      VALUES ('$userName','GIS and remote sensing','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";     
     }
+    elseif (condition) {
+        // code...
+    }
 
      
     
@@ -87,6 +90,14 @@ if(isset($_POST['submit']))
                               <option value="Urban Interiority – Emerging cultural and spatial practices">Urban Interiority – Emerging cultural and spatial practices</option>
                               <option value="Street food of old delhi">Street food of old delhi</option>
                               <option value="MSME Production Skillset">MSME Production Skillset</option>
+                              <option value="Science of Light">Science of Light</option>
+                              <option value="Research Methodology">Research Methodology</option>
+                              <option value="Latest Trends in Marketing">Latest Trends in Marketing</option>
+                              <option value="Business Analytics">Business Analytics</option>
+                              <option value="Digital Marketing">Digital Marketing</option>
+                              <option value="Criminal Justice Administration">Criminal Justice Administration</option>
+                              <option value="Emerging Issues in Corporate Law">Emerging Issues in Corporate Law</option>
+                              <option value="Intellectual Property Rights">Intellectual Property Rights</option>
                             </select>
                         </div><!-- 
                         <div class="form-group">
