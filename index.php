@@ -118,8 +118,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 							<i class="icon-shop"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">SPD</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<h3><a href="#">Hotel Management</a></h3>
+							<p> A Hotel Manager is a person who is responsible for the day-to-day management of a hotel and its staff.</p>
 						</div>
 					</div>
 				</div>
@@ -129,8 +129,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 							<i class="icon-heart4"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Health &amp; Psychology</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<h3><a href="#">Health Science</a></h3>
+							<p>Those sciences which focus on health, or health care, as core parts of their subject matter</p>
 						</div>
 					</div>
 				</div>
@@ -140,30 +140,20 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 							<i class="icon-banknote"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Accounting</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<h3><a href="#">Business</a></h3>
+							<p>A business description is a high-level overview of your company that you include in your business plan. </p>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-3 col-sm-6 text-center animate-box">
-					<div class="services">
-						<span class="icon">
-							<i class="icon-lab2"></i>
-						</span>
-						<div class="desc">
-							<h3><a href="#">Science &amp; Technology</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-						</div>
-					</div>
-				</div>
+				
 				<div class="col-md-3 col-sm-6 text-center animate-box">
 					<div class="services">
 						<span class="icon">
 							<i class="icon-photo"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Art &amp; Media</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<h3><a href="#">Design</a></h3>
+							<p>A design is a plan or specification for the construction of an object or system or for the implementation of an activity or process.</p>
 						</div>
 					</div>
 				</div>
@@ -173,8 +163,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 							<i class="icon-home-outline"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Real Estate</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<h3><a href="#">Architecture</a></h3>
+							<p>The art or science of building specifically : the art or practice of designing and building structures and especially habitable ones.</p>
 						</div>
 					</div>
 				</div>
@@ -184,8 +174,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 							<i class="icon-bubble3"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Language</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<h3><a href="#">Law</a></h3>
+							<p>Discipline and profession concerned with the customs, practices, and rules of conduct of a community that are recognized as binding by the community.</p>
 						</div>
 					</div>
 				</div>
@@ -195,8 +185,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 							<i class="icon-world"></i>
 						</span>
 						<div class="desc">
-							<h3><a href="#">Web &amp; Programming</a></h3>
-							<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+							<h3><a href="#">Engineering</a></h3>
+							<p>Use of scientific principles to design and build machines, structures, including bridges, tunnels, roads, vehicles, and buildings.</p>
 						</div>
 					</div>
 				</div>
