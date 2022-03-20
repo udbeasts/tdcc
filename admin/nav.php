@@ -12,7 +12,7 @@
 							<li id="btns" class="" ><a href="index.php">Home</a></li>
 							<li><a href="courses.php">Courses</a></li>
 							<li><a href="contact.php">Contact</a></li>
-							<li class="btn-cta"><a href="admin/login.php"><span>Login</span></a></li>
+							<li class="btn-cta"><a href="profile.php"><span>Profile</span></a></li>
 							<li class="btn-cta"><a href="admin/logout.php"><span>logout</span></a></li>
 						</ul>
 					</div>
