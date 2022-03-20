@@ -127,7 +127,6 @@ if(isset($_POST['submit']))
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<h2>Our Course</h2>
 					<p>You can choose one of the course from any other School</p>
 				</div>
 			</div>
@@ -147,7 +146,6 @@ if(isset($_POST['submit']))
                             </select>
                         </div> -->
                         <div class="form-group">
-                            <label>Choose a Course Title</label><br>
                             <select name="title">
                               <option value="GIS and remote sensing">GIS and remote sensing</option>
                               <option value="Urban Interiority – Emerging cultural and spatial practices">Urban Interiority – Emerging cultural and spatial practices</option>

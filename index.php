@@ -67,7 +67,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
-									<p><a class="btn btn-primary btn-lg" href="admin/login.php">Start Learning Now!</a></p>
+									<p><a class="btn btn-primary btn-lg" href="courses.php">Start Learning Now!</a></p>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -80,7 +80,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>The Great Aim of Education is not Knowledge, But Action</h1>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="admin/login.php">Start Learning Now!</a></p>
+									<p><a class="btn btn-primary btn-lg btn-learn" href="courses.php">Start Learning Now!</a></p>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -93,7 +93,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>We Help You to Learn New Things</h1>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="admin/login.php">Start Learning Now!</a></p>
+									<p><a class="btn btn-primary btn-lg btn-learn" href="courses.php">Start Learning Now!</a></p>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -203,7 +203,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 					<h2>Get TDCC Courses</h2>
 					<h3>By Sushant Univeristy</h3>
 					<div class="simply-countdown simply-countdown-one"></div>
-					<p><a href="admin/login.php" class="btn btn-primary btn-lg btn-reg">Register Now!</a></p>
+					<p><a href="courses.php" class="btn btn-primary btn-lg btn-reg">Register Now!</a></p>
 				</div>
 			</div>
 		</div>
