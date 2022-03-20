@@ -1,3 +1,80 @@
+<?php
+  
+if($_POST) {
+    $visitor_name = "";
+    $visitor_email = "";
+    $email_title = "";
+    $concerned_department = "";
+    $visitor_message = "";
+    $email_body = "<div>";
+      
+    if(isset($_POST['visitor_name'])) {
+        $visitor_name = filter_var($_POST['visitor_name'], FILTER_SANITIZE_STRING);
+        $email_body .= "<div>
+                           <label><b>Visitor Name:</b></label>&nbsp;<span>".$visitor_name."</span>
+                        </div>";
+    }
+ 
+    if(isset($_POST['visitor_email'])) {
+        $visitor_email = str_replace(array("\r", "\n", "%0a", "%0d"), '', $_POST['visitor_email']);
+        $visitor_email = filter_var($visitor_email, FILTER_VALIDATE_EMAIL);
+        $email_body .= "<div>
+                           <label><b>Visitor Email:</b></label>&nbsp;<span>".$visitor_email."</span>
+                        </div>";
+    }
+      
+    if(isset($_POST['email_title'])) {
+        $email_title = filter_var($_POST['email_title'], FILTER_SANITIZE_STRING);
+        $email_body .= "<div>
+                           <label><b>Reason For Contacting Us:</b></label>&nbsp;<span>".$email_title."</span>
+                        </div>";
+    }
+      
+    if(isset($_POST['concerned_department'])) {
+        $concerned_department = filter_var($_POST['concerned_department'], FILTER_SANITIZE_STRING);
+        $email_body .= "<div>
+                           <label><b>Concerned Department:</b></label>&nbsp;<span>".$concerned_department."</span>
+                        </div>";
+    }
+      
+    if(isset($_POST['visitor_message'])) {
+        $visitor_message = htmlspecialchars($_POST['visitor_message']);
+        $email_body .= "<div>
+                           <label><b>Visitor Message:</b></label>
+                           <div>".$visitor_message."</div>
+                        </div>";
+    }
+      
+    if($concerned_department == "billing") {
+        $recipient = "billing@domain.com";
+    }
+    else if($concerned_department == "marketing") {
+        $recipient = "marketing@domain.com";
+    }
+    else if($concerned_department == "technical support") {
+        $recipient = "tech.support@domain.com";
+    }
+    else {
+        $recipient = "contact@domain.com";
+    }
+      
+    $email_body .= "</div>";
+ 
+    $headers  = 'MIME-Version: 1.0' . "\r\n"
+    .'Content-type: text/html; charset=utf-8' . "\r\n"
+    .'From: ' . $visitor_email . "\r\n";
+      
+    if(mail($recipient, $email_title, $email_body, $headers)) {
+        echo "<p>Thank you for contacting us, $visitor_name. You will get a reply within 24 hours.</p>";
+    } else {
+        echo '<p>We are sorry but the email did not go through.</p>';
+    }
+      
+} else {
+    // echo '<p>Something went wrong</p>';
+}
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -45,26 +122,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="top-menu">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-2">
-						<img style="height: 40px;" src="images/sushantlogo.png">
-					</div>
-					<div class="col-xs-10 text-right menu-1">
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="courses.html">Courses</a></li>
-							<li class="active"><a href="contact.html">Contact</a></li>
-							<li class="btn-cta"><a href="#"><span>Login</span></a></li>
-						</ul>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</nav>
+	<?php require'admin/nav.php' ?>
 	
 	<aside id="fh5co-hero">
 		<div class="flexslider">
@@ -94,76 +152,106 @@
 					<div class="fh5co-contact-info">
 						<h3>Contact Information</h3>
 						<ul>
-							<li class="address">198 West 21th Street, <br> Suite 721 New York NY 10016</li>
-							<li class="phone"><a href="tel://1234567920">+ 1235 2355 98</a></li>
-							<li class="email"><a href="mailto:info@yoursite.com">info@yoursite.com</a></li>
-							<li class="url"><a href="http://freehtml5.co">freeHTML5.co</a></li>
+						<li class="address">Golf Course Rd, Huda, Sushant Lok 2, <br> Sector 55, Gurugram, Haryana 122003</li>
+							<li class="phone"><a href="tel://1800-270-5520">+ 1800-270-5520</a></li>
+							<li class="email"><a href="mailto:info@sushantuniversity.edu.in">info@sushantuniversity.edu.in</a></li>
+							<li class="url"><a href="https://sushantuniversity.edu.in">sushantuniversity.edu.in</a></li>
 						</ul>
 					</div>
 
 				</div>
 				<div class="col-md-6 animate-box">
 					<h3>Get In Touch</h3>
-					<form action="#">
+					<form action="contact.php" method="post">
 						<div class="row form-group">
 							<div class="col-md-6">
 								<!-- <label for="fname">First Name</label> -->
-								<input type="text" id="fname" class="form-control" placeholder="Your firstname">
+							<label for="name">Your Name</label>
+							<input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+								<!-- <label for="fname">First Name</label>
+								<input type="text" id="fname" class="form-control" placeholder="Your firstname"> -->
 							</div>
-							<div class="col-md-6">
-								<!-- <label for="lname">Last Name</label> -->
-								<input type="text" id="lname" class="form-control" placeholder="Your lastname">
+						</div>
+						<div class="row form-group">
+							<div class="col-md-12">
+							<label for="email">Your E-mail</label>
+								<input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
-								<!-- <label for="email">Email</label> -->
-								<input type="text" id="email" class="form-control" placeholder="Your email address">
+							<label for="department-selection">Choose Concerned Department</label>
+                            <select id="department-selection" name="concerned_department" required>
+                                <option value="">Select a Department</option>
+                                <option value="billing">Billing</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="technical support">Technical Support</option>
+                            </select>
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="subject">Subject</label> -->
-								<input type="text" id="subject" class="form-control" placeholder="Your subject of this message">
+								<label for="title">Reason For Contacting Us</label>
+								<input type="text" id="title" name="email_title" required placeholder="Unable to Reset my Password" pattern=[A-Za-z0-9\s]{8,60}>
+								<!-- <input type="text" id="subject" class="form-control" placeholder="Your subject of this message"> -->
 							</div>
 						</div>
 
 						<div class="row form-group">
 							<div class="col-md-12">
 								<!-- <label for="message">Message</label> -->
-								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea>
+								<label for="message">Write your message</label>
+								<textarea id="message" name="visitor_message" placeholder="Say whatever you want." required></textarea>
+								<!-- <textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="Say something about us"></textarea> -->
 							</div>
 						</div>
 						<div class="form-group">
 							<input type="submit" value="Send Message" class="btn btn-primary">
 						</div>
 
-					</form>		
+					</form>	
+					
+	<!-- <form action="contact.php" method="post">
+  <div class="elem-group">
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+  </div>
+  <div class="elem-group">
+    <label for="email">Your E-mail</label>
+    <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+  </div>
+  <div class="elem-group">
+    <label for="department-selection">Choose Concerned Department</label>
+    <select id="department-selection" name="concerned_department" required>
+        <option value="">Select a Department</option>
+        <option value="billing">Billing</option>
+        <option value="marketing">Marketing</option>
+        <option value="technical support">Technical Support</option>
+    </select>
+  </div>
+  <div class="elem-group">
+    <label for="title">Reason For Contacting Us</label>
+    <input type="text" id="title" name="email_title" required placeholder="Unable to Reset my Password" pattern=[A-Za-z0-9\s]{8,60}>
+  </div>
+  <div class="elem-group">
+    <label for="message">Write your message</label>
+    <textarea id="message" name="visitor_message" placeholder="Say whatever you want." required></textarea>
+  </div>
+  <button type="submit">Send Message</button>
+</form> -->
+
 				</div>
 			</div>
 			
 		</div>
 	</div>
-	<div id="map" class="fh5co-map"></div>
-
+	
 	
 
-		<footer id="fh5co-footer" role="contentinfo" style="background-image: url(images/img_bg_4.jpg);">
-			<div class="overlay"></div>
-			<div class="container">
-				<div class="row row-pb-md">
-				<div class="row copyright">
-					<div class="col-md-12 text-center">
-						<p>
-							<small class="block">&copy; Sushant University</small> 	
-						</p>
-					</div>
-				</div>
-	
-			</div>
-		</footer>
+					<?php require 'admin/foot.php' ?>
 	</div>
 
 	<div class="gototop js-top">

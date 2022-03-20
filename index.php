@@ -1,3 +1,14 @@
+<?php
+// Initialize the session
+session_start();
+ 
+// Check if the user is logged in, if not then redirect him to login page
+if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+    header("location: admin/login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -44,28 +55,7 @@
 	<div class="fh5co-loader"></div>
 	
 	<div id="page">
-	<nav class="fh5co-nav" role="navigation">
-		<div class="top">
-		<div class="top-menu">
-			<div class="container">
-				<div class="row">
-					<div class="col-xs-2">
-						<img style="height: 40px;" src="images/sushantlogo.png">
-						<!-- <div id="fh5co-logo"><a href="index.html"><i class="icon-study"></i><span><img src="images/sushantlogo.png" ></span></a></div> -->
-					</div>
-					<div class="col-xs-10 text-right menu-1">
-						<ul>
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="courses.html">Courses</a></li>
-							<li><a href="contact.html">Contact</a></li>
-							<li class="btn-cta"><a href="#"><span>Login</span></a></li>
-						</ul>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-	</nav>
+	<?php require'admin/nav.php' ?>
 	
 	<aside id="fh5co-hero">
 		<div class="flexslider">
@@ -77,7 +67,7 @@
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>The Roots of Education are Bitter, But the Fruit is Sweet</h1>
-									<p><a class="btn btn-primary btn-lg" href="#">Start Learning Now!</a></p>
+									<p><a class="btn btn-primary btn-lg" href="admin/login.php">Start Learning Now!</a></p>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -90,7 +80,7 @@
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>The Great Aim of Education is not Knowledge, But Action</h1>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>
+									<p><a class="btn btn-primary btn-lg btn-learn" href="admin/login.php">Start Learning Now!</a></p>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -103,7 +93,7 @@
 			   			<div class="col-md-8 col-md-offset-2 text-center slider-text">
 			   				<div class="slider-text-inner">
 			   					<h1>We Help You to Learn New Things</h1>
-									<p><a class="btn btn-primary btn-lg btn-learn" href="#">Start Learning Now!</a></p>
+									<p><a class="btn btn-primary btn-lg btn-learn" href="admin/login.php">Start Learning Now!</a></p>
 			   				</div>
 			   			</div>
 			   		</div>
@@ -223,26 +213,13 @@
 					<h2>Get TDCC Courses</h2>
 					<h3>By Sushant Univeristy</h3>
 					<div class="simply-countdown simply-countdown-one"></div>
-					<p><a href="#" class="btn btn-primary btn-lg btn-reg">Register Now!</a></p>
+					<p><a href="admin/login.php" class="btn btn-primary btn-lg btn-reg">Register Now!</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<footer id="fh5co-footer" role="contentinfo" style="background-image: url(images/img_bg_4.jpg);">
-		<div class="overlay"></div>
-		<div class="container">
-			<div class="row row-pb-md">
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; Sushant University</small> 
-					</p>
-				</div>
-			</div>
-
-		</div>
-	</footer>
+	<?php require 'admin/foot.php' ?>
 	</div>
 
 	<div class="gototop js-top">
@@ -290,6 +267,8 @@
         enableUtc: false
     });
 	</script>
+
+
 	</body>
 </html>
 
