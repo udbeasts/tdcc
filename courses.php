@@ -127,7 +127,7 @@ if(isset($_POST['submit']))
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-6 col-md-offset-3 text-center fh5co-heading">
-					<p>You can choose one of the course from any other School</p>
+					<h4>You can choose one of the course from any other School</h4>
 				</div>
 			</div>
 			<center>
@@ -146,7 +146,7 @@ if(isset($_POST['submit']))
                             </select>
                         </div> -->
                         <div class="form-group">
-                            <select name="title">
+                            <select name="title" class="form-control">
                               <option value="GIS and remote sensing">GIS and remote sensing</option>
                               <option value="Urban Interiority – Emerging cultural and spatial practices">Urban Interiority – Emerging cultural and spatial practices</option>
                               <option value="Street food of old delhi">Street food of old delhi</option>
@@ -170,7 +170,7 @@ if(isset($_POST['submit']))
                               <option value="TDC22ET01">TDC22ET01</option>
                             </select>
                         </div> -->
-                        
+                        <br>
                         <input type="submit" class="btn btn-primary" name="submit" value="Submit">
                     </form></center>
 			<!-- <div class="row">
