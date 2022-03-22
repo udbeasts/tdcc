@@ -23,26 +23,76 @@ if(isset($_POST['submit']))
      // $faculty = $_POST['faculty'];
      // $school = $_POST['school'];
 
-    if ($title == "GIS and remote sensing") {
+	// $sql = "SELECT * from details.username";
+	// $result = $link->query($sql);
+	// echo $result;
+	// if ($result->num_rows > 0) {
+	// 	echo "<table><tr><th>ID</th><th>Name</th></tr>";
+	// 	// output data of each row
+	// 	while($row = $result->fetch_assoc()) {
+	// 	  echo "<tr><td>".$row["username"]."</td></tr>";
+	// 	}
+	// 	echo "</table>";
+	//   } else {
+	// 	echo "0 results";
+	//   }
+
+
+
+
+
+    if ($title == "GIS and remote sensing" ) {
             
-          $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     VALUES ('$userName','GIS and remote sensing','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";     
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','GIS and remote sensing','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";     
     }
-    elseif (condition) {
-        // code...
+    elseif ($title == "Urban Interiority – Emerging cultural and spatial practices") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','Urban Interiority – Emerging cultural and spatial practices','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+    }
+	elseif ($title == "Street food of old delhi") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','Street food of old delhi','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+    }
+	elseif ($title == "MSME Production Skillset") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','MSME Production Skillset','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+    }
+	elseif ($title == "Science of Light") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','Science of Light','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+    }
+	elseif ($title == "Research Methodology") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','Research Methodology','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+    }
+	elseif ($title == "Latest Trends in Marketing") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','Latest Trends in Marketing','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+    }
+	elseif ($title == "Business Analytics") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','Business Analytics','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+    }
+	elseif ($title == "Digital Marketing") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','Digital Marketing','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+    }
+	elseif ($title == "Criminal Justice Administration") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','Criminal Justice Administration','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+    }
+	elseif ($title == "Emerging Issues in Corporate Law") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','Emerging Issues in Corporate Law','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+    }
+	elseif ($title == "Intellectual Property Rights") {
+        $sql = "INSERT INTO details (username,title,course_code, faculty, school)
+     	VALUES ('$userName','Intellectual Property Rights','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
     }
 
-    // elseif ($title == "Urban Interiority – Emerging cultural and spatial practices") {
-            
-    //       $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-    //  VALUES ('$userName','Urban Interiority – Emerging cultural and spatial practices','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";     
-    // }
-    // elseif (condition) {
-    //     // code...
-    // }
 
-     
-    
+
     if ($link->query($sql) === TRUE) {
       // echo "New record created successfully";
     } else {
@@ -172,7 +222,8 @@ if(isset($_POST['submit']))
                         </div> -->
                         <br>
                         <input type="submit" class="btn btn-primary" name="submit" value="Submit">
-                    </form></center>
+                    </form>
+				</center>
 			<!-- <div class="row">
 				<div class="col-md-6 animate-box">
 					<form action="courses.php" method="post">
