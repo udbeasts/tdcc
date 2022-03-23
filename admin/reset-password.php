@@ -94,7 +94,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="row g-0">
                 <div class="card-body p-md-5 mx-md-4">
                 <div class="col-xs-2 text-center">
-						<img style="height: 40px;" src="images/sushantlogo.png">
+                <img style="height: 40px;" src="../images/sushantlogo.png">
+            <Hr>
 					</div>
 
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -114,7 +115,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   
                     <div class="form-group text-center pt-1 mb-5 pb-1">
                     <input type="submit" class="btn btn-primary" value="Submit">
-                    <a class="btn btn-link ml-2" href="index.php">Cancel</a>
+                    <a class="btn btn-link ml-2" href="../index.php">Cancel</a>
                     </div>
   
                   </form>

@@ -117,7 +117,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="row g-0">
                 <div class="card-body p-md-5 mx-md-4">
                 <div class="col-xs-2 text-center">
-						<img style="height: 40px;" src="images/sushantlogo.png">
+                <img style="height: 40px;" src="../images/sushantlogo.png">
+            <Hr>
 					</div>
 
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

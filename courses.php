@@ -48,47 +48,47 @@ if(isset($_POST['submit']))
     }
     elseif ($title == "Urban Interiority – Emerging cultural and spatial practices") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','Urban Interiority – Emerging cultural and spatial practices','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','Urban Interiority – Emerging cultural and spatial practices','TDC22AA01','Ms. Snigdha Roy','SAA')";
     }
 	elseif ($title == "Street food of old delhi") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','Street food of old delhi','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','Street food of old delhi','TDC22VH01','Mr.Sunil Kumar   ','VHTBS')";
     }
 	elseif ($title == "MSME Production Skillset") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','MSME Production Skillset','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','MSME Production Skillset','TDC22ET01','Mr. Rajan Bansal','SET')";
     }
 	elseif ($title == "Science of Light") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','Science of Light','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','Science of Light','TDC22ET03','Dr. Isha Saini','SET')";
     }
 	elseif ($title == "Research Methodology") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','Research Methodology','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','Research Methodology','TDC22DN01','Ms. Shalini Sharma','SOD')";
     }
 	elseif ($title == "Latest Trends in Marketing") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','Latest Trends in Marketing','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','Latest Trends in Marketing','TDC22BS01','Dr. Priyanka Pradhan','SOB')";
     }
 	elseif ($title == "Business Analytics") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','Business Analytics','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','Business Analytics','TDC22BS02','New Faculty','SOB')";
     }
 	elseif ($title == "Digital Marketing") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','Digital Marketing','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','Digital Marketing','TDC22BS03','Dr. Neha Gupta','SOB')";
     }
 	elseif ($title == "Criminal Justice Administration") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','Criminal Justice Administration','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','Criminal Justice Administration','TDC22LW01','Dr Kirti Dahiya','SOL')";
     }
 	elseif ($title == "Emerging Issues in Corporate Law") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','Emerging Issues in Corporate Law','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','Emerging Issues in Corporate Law','TDC22LW02','Ms. Arushi','SOL')";
     }
 	elseif ($title == "Intellectual Property Rights") {
         $sql = "INSERT INTO details (username,title,course_code, faculty, school)
-     	VALUES ('$userName','Intellectual Property Rights','TDC22PD01','Dr. Himadri Shekhar Dey','SPD')";
+     	VALUES ('$userName','Intellectual Property Rights','TDC22HS01','Mr. Saurabh Saraswat','SHS')";
     }
 
 
